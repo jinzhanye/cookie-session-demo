@@ -11,6 +11,7 @@ app.use(cookieSession({
 
 app.get('/', (req, res) => {
   // btoa(JSON.stringify({ tokenA: 'foo', tokenB: 'bar' })) === 'eyJ0b2tlbkEiOiJmb28iLCJ0b2tlbkIiOiJiYXIifQ=='
+  // 真正业务开发的 token 会使用 JWT，这里为了方便对比序列化后的值，采用一些如 foo、bar 这样子简单的字符串作为 token。
   req.session.tokenA = 'foo'
   req.session.tokenB = 'bar'
 
